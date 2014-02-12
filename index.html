@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Pong</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+		<link rel="stylesheet" href="/styles.css" />
+	</head>
+	<body>
+		<div class="centered">
+			<h1>Pong</h1>
+			<canvas tabindex="1" width="640" height="480"></canvas>
+		</div>
+		<script src="game.js"></script>
+		<script src="entity.js"></script>
+		<script src="background.js"></script>
+		<script src="ball.js"></script>
+		<script type="text/javascript">
+			var game;
+
+			$(function() {
+				var canvas = $('canvas');
+				game = new Game(canvas[0]);
+				game.entities = [
+					new Background(),
+					new Ball()
+				];
+				game.start();
+				canvas.focus();
+			});
+		</script>
+	</body>
+</html>
