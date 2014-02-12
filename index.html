@@ -14,6 +14,9 @@
 		<script src="entity.js"></script>
 		<script src="background.js"></script>
 		<script src="ball.js"></script>
+		<script src="paddle.js"></script>
+		<script src="player.js"></script>
+		<script src="bot.js"></script>
 		<script type="text/javascript">
 			var game;
 
@@ -21,8 +24,10 @@
 				var canvas = $('canvas');
 				game = new Game(canvas[0]);
 				game.entities = [
-					new Background(),
-					new Ball()
+					game.background = new Background(),
+					game.ball = new Ball(),
+					game.player = new Player(),
+					game.bot = new Bot()
 				];
 				game.start();
 				canvas.focus();

@@ -22,6 +22,10 @@ function Entity() {
   	context.fillRect(self.x, self.y, self.width, self.height);
   };
 
+  self.center = function() {
+  	return {x: self.x + self.width / 2, y: self.y + self.height / 2};
+  };
+
   self.intersect = function(other) {
 	  return this.y + this.height > other.y &&
 	         this.y               < other.y + other.height &&
