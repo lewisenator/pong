@@ -8,7 +8,7 @@ function Paddle() {
   self.init = function() {
   	self.width = 20;
   	self.height = 100;
-
+  	self.score = 0;
   	self.y = game.height / 2 - self.height / 2;
   };
 

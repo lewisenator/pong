@@ -13,9 +13,9 @@ function Bot() {
   self.update = function() {
   	var speed = 5;
 
-    if (game.ball.center().y < self.y) {
+    if (game.ball.center().y < self.center().y) {
       self.yVelocity = -speed;
-    } else if (game.ball.center().y > self.y) {
+    } else if (game.ball.center().y > self.center().y) {
       self.yVelocity = speed;
     } else {
       self.yVelocity = 0;
